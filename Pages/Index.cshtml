@@ -1,10 +1,15 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Sport Playing Partner Finder";
+    TimeSpan timeInBusiness = DateTime.Now - new DateTime(2023, 9, 28);
 }
 
 <div class="text-center">
-    <h1>Hello, world!</h1>
-    <p>The time on the server is @DateTime.Now</p>
+    <h1>Sport Playing Partner Finder</h1>
+    <p>Are you looking for people to play <span style="font-weight:bold">tennis</span> or <span style="font-weight:bold">soccer</span> with?</p>
+    <p>We've been connecting tennis and soccer players for @Convert.ToInt32(timeInBusiness.TotalDays) days and counting!</p>
+    <br>
+    <p>Sign up for our <span style="font-weight:bold">nationwide social network</span> of tennis and soccer players:</p>
+    <button class="btn btn-primary"><a class="text-light" style="text-decoration:none" asp-area="" asp-page="/LoginSignup">Sign Up</a></button>
 </div>

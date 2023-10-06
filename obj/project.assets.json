@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\grant\\.nuget\\packages\\": {}
+    "C:\\Users\\grxnt\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\grant\\MyWebApp\\MyWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\grxnt\\sport-playing-partner-finder\\MyWebApp.csproj",
       "projectName": "MyWebApp",
-      "projectPath": "C:\\Users\\grant\\MyWebApp\\MyWebApp.csproj",
-      "packagesPath": "C:\\Users\\grant\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\grant\\MyWebApp\\obj\\",
+      "projectPath": "C:\\Users\\grxnt\\sport-playing-partner-finder\\MyWebApp.csproj",
+      "packagesPath": "C:\\Users\\grxnt\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\grxnt\\sport-playing-partner-finder\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\grant\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\grxnt\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -62,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
