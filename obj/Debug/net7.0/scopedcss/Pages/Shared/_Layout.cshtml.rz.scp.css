@@ -46,3 +46,7 @@ button.accept-policy[b-529uds4zl5] {
   white-space: nowrap;
   line-height: 60px;
 }
+
+.search-width[b-529uds4zl5] {
+  width: 200px; /* Trying to fix search bar */
+}
