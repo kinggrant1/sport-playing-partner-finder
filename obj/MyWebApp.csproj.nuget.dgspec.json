@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\grxnt\\sport-playing-partner-finder\\MyWebApp.csproj": {}
+    "C:\\Users\\devin\\source\\repos\\sportRepos\\sport-playing-partner-finder\\MyWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\grxnt\\sport-playing-partner-finder\\MyWebApp.csproj": {
+    "C:\\Users\\devin\\source\\repos\\sportRepos\\sport-playing-partner-finder\\MyWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\grxnt\\sport-playing-partner-finder\\MyWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\devin\\source\\repos\\sportRepos\\sport-playing-partner-finder\\MyWebApp.csproj",
         "projectName": "MyWebApp",
-        "projectPath": "C:\\Users\\grxnt\\sport-playing-partner-finder\\MyWebApp.csproj",
-        "packagesPath": "C:\\Users\\grxnt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\grxnt\\sport-playing-partner-finder\\obj\\",
+        "projectPath": "C:\\Users\\devin\\source\\repos\\sportRepos\\sport-playing-partner-finder\\MyWebApp.csproj",
+        "packagesPath": "C:\\Users\\devin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\devin\\source\\repos\\sportRepos\\sport-playing-partner-finder\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\grxnt\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\devin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -56,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
