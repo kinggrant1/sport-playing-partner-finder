@@ -21,7 +21,7 @@ ViewData["Title"] = "Soccer";
 </head>
 <body>
     <h2> Search by position </h2>
-    <form action="/search" method="GET">
+    <!--<form action="/search" method="GET"> -->
         <select id="position" name="position" class="search-width">
             <option value="">Select position</option> <!-- Default value !-->
             <option value="GK">Goalkeeper</option>
@@ -34,8 +34,8 @@ ViewData["Title"] = "Soccer";
         <button type="submit">Search</button>
         <!-- 
             <input type="text" name="position" placeholder="Position">
-            <input type="submit" value="Search"> -->
-    </form>
+            <input type="submit" value="Search"> 
+    </form> -->
 
     <style>
     .table-style {
@@ -62,15 +62,39 @@ ViewData["Title"] = "Soccer";
     }
     </style>
     <table class="table-style"> 
-            <tr>
-                <th style="padding: 1px">Player</th>
-                <th style="padding: 1px">Position</th>
-                <th style="padding: 1px">Country</th>
-            </tr>
-            <tr>
-                <td style="padding: 1px">Lionel Messi</td> <!-- Will connect to database later !-->
-                <td style="padding: 1px">ST</td>
-                <td style="padding: 1px">Argentina</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th style="padding: 1px">Player</th>
+                    <th style="padding: 1px">Position</th>
+                    <th style="padding: 1px">Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var player in Model.Players) {
+                    <tr>
+                        <td style="padding: 1px">@player.Name</td>
+                        <td style="padding: 1px">@player.Position</td>
+                        <td style="padding: 1px">@player.Country</td>
+                    </tr>
+                }
+            </tbody>
     </table>
+    <script>
+        var positionFilter = document.getElementById('position'); <!-- a lot of research !-->
+        var rows = document.querySelectorAll('.table-style tbody tr');
+        
+        positionFilter.addEventListener('change', function() {
+            var selectedPosition = this.value;
+
+            rows.forEach(function(row) {
+                var position = row.getAttribute('data-position');
+
+                if (selectedPosition === '' || selectedPosition === position) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
