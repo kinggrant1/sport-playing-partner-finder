@@ -51,3 +51,13 @@ button.accept-policy[b-529uds4zl5] {
 .search-width[b-529uds4zl5] {
   width: 200px; /* Trying to fix search bar */
 }
+
+.wrap[b-529uds4zl5] {
+  position: relative;
+  display: flex;
+  min-width: 100px;
+}
+
+.table-style[b-529uds4zl5] {
+  border: 1px solid #ddd;
+}

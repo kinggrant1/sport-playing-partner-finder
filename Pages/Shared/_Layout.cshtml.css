@@ -50,3 +50,13 @@ button.accept-policy {
 .search-width {
   width: 200px; /* Trying to fix search bar */
 }
+
+.wrap {
+  position: relative;
+  display: flex;
+  min-width: 100px;
+}
+
+.table-style {
+  border: 1px solid #ddd;
+}

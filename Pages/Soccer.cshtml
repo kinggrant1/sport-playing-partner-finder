@@ -10,6 +10,7 @@ ViewData["Title"] = "Soccer";
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         Position Search
     </title>
@@ -21,7 +22,6 @@ ViewData["Title"] = "Soccer";
 <body>
     <h2> Search by position </h2>
     <form action="/search" method="GET">
-        <label for="position">Enter position: </label>
         <select id="position" name="position" class="search-width">
             <option value="">Select position</option> <!-- Default value !-->
             <option value="Goalkeeper">GK</option>
@@ -36,4 +36,30 @@ ViewData["Title"] = "Soccer";
             <input type="text" name="position" placeholder="Position">
             <input type="submit" value="Search"> -->
     </form>
+    
+    <style>
+    .table-style {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .table-style th, .table-style td {
+        padding: 10px;
+        border: 1px solid black;
+    }
+    </style>
+    <table class="table-style"> 
+            <tr>
+                <th style="padding: 1px">Player</th>
+                <th style="padding: 1px">Position</th>
+                <th style="padding: 1px">Team</th>
+                <th style="padding: 1px">Country</th>
+            </tr>
+            <tr>
+                <td style="padding: 1px">Lionel Messi</td> <!-- Will connect to database later !-->
+                <td style="padding: 1px">Striker</td>
+                <td style="padding: 1px">FC Barcelona</td>
+                <td style="padding: 1px">Argentina</td>
+            </tr>
+    </table>
 </body>

@@ -5,6 +5,7 @@ namespace MyWebApp.Pages
 {
     public class SoccerModel : PageModel
     {
+        public string Name {get; set;}
         public void OnGet()
         {
         }
