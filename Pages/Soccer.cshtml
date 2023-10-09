@@ -24,41 +24,52 @@ ViewData["Title"] = "Soccer";
     <form action="/search" method="GET">
         <select id="position" name="position" class="search-width">
             <option value="">Select position</option> <!-- Default value !-->
-            <option value="Goalkeeper">GK</option>
-            <option value="Center Back">CB</option>
-            <option value="Center Midfield">CM</option>
-            <option value="Striker">ST</option>
-            <option value="Winger">W</option>
-            <option value="Fullback">FB</option> <!-- Fullback is Left back or Right back !-->
+            <option value="GK">Goalkeeper</option>
+            <option value="CB">Center Back</option>
+            <option value="CM">Center Midfielder</option>
+            <option value="ST">Striker</option>
+            <option value="W">Winger</option>
+            <option value="FB">Fullback</option> <!-- Fullback is Left back or Right back !-->
         </select>
         <button type="submit">Search</button>
         <!-- 
             <input type="text" name="position" placeholder="Position">
             <input type="submit" value="Search"> -->
     </form>
-    
+
     <style>
     .table-style {
         width: 100%;
         border-collapse: collapse;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .table-style th, .table-style td {
         padding: 10px;
-        border: 1px solid black;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+    .table-style th {
+        background-color: #3e49e6;
+        color: white;
+    }
+    .table-style tr:nth-child(even) {
+        background-color: white;
+    }
+    .table-style tr:hover {
+        background-color: #f5f5f5;
     }
     </style>
     <table class="table-style"> 
             <tr>
                 <th style="padding: 1px">Player</th>
                 <th style="padding: 1px">Position</th>
-                <th style="padding: 1px">Team</th>
                 <th style="padding: 1px">Country</th>
             </tr>
             <tr>
                 <td style="padding: 1px">Lionel Messi</td> <!-- Will connect to database later !-->
-                <td style="padding: 1px">Striker</td>
-                <td style="padding: 1px">FC Barcelona</td>
+                <td style="padding: 1px">ST</td>
                 <td style="padding: 1px">Argentina</td>
             </tr>
     </table>
