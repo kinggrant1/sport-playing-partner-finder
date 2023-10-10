@@ -22,7 +22,7 @@ ViewData["Title"] = "Soccer";
 <body>
     <h2> Search by position </h2>
     <!--<form action="/search" method="GET"> -->
-        <select id="position" name="position" class="search-width">
+        <select id="position" class="search-width">
             <option value="">Select position</option> <!-- Default value !-->
             <option value="GK">Goalkeeper</option>
             <option value="CB">Center Back</option>
@@ -37,7 +37,7 @@ ViewData["Title"] = "Soccer";
             <input type="submit" value="Search"> 
     </form> -->
 
-    <style>
+    <style> <!-- table css stylization !-->
     .table-style {
         width: 100%;
         border-collapse: collapse;
@@ -70,8 +70,8 @@ ViewData["Title"] = "Soccer";
                 </tr>
             </thead>
             <tbody>
-                @foreach (var player in Model.Players) {
-                    <tr>
+                @foreach (var player in Model.Players) { 
+                    <tr data-position="@player.Position">
                         <td style="padding: 1px">@player.Name</td>
                         <td style="padding: 1px">@player.Position</td>
                         <td style="padding: 1px">@player.Country</td>
@@ -80,15 +80,16 @@ ViewData["Title"] = "Soccer";
             </tbody>
     </table>
     <script>
-        var positionFilter = document.getElementById('position'); <!-- a lot of research !-->
-        var rows = document.querySelectorAll('.table-style tbody tr');
+        var positionFilter = document.getElementById('position'); //look at links for more information
+        var rows = document.querySelectorAll('.table-style tbody tr'); //querySelectorAll accepts css selectors
         
         positionFilter.addEventListener('change', function() {
             var selectedPosition = this.value;
-
+            console.log("selectedPosition: ", selectedPosition);
             rows.forEach(function(row) {
+                //var position = row.cells[1].innerText; //works but isn't ideal way of doing it
                 var position = row.getAttribute('data-position');
-
+                console.log("position: ", position);
                 if (selectedPosition === '' || selectedPosition === position) {
                     row.style.display = '';
                 } else {

@@ -8,7 +8,7 @@ namespace MyWebApp.Pages
         public List<Player> Players {get; set;}
         public SoccerModel()
         {
-            Players = new List<Player>
+            Players = new List<Player> //will add database functionality here
             {
                 new Player {Name = "Ronaldo", Position = "ST", Country = "Portugal"},
                 new Player {Name = "Messi", Position = "ST", Country = "Argentina"},
