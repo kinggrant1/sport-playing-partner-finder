@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AjzESOvIybfdSWLy/trpEmCzq0WQTq67Ed4I0xdJOvTDFl0BfNIdh8rWGyFHzPUnTyFtMSVkYl/2VHfo5VPBuw==",
+  "dgSpecHash": "64kxIH7bEGSDO4pHRku2Vc8SbG6pmESffAWB/20SMjKUHOSBctGlKIxs7ipjlYezwWZMnx1vsNeiYApeVsQoZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\devin\\source\\repos\\sportRepos\\sport-playing-partner-finder\\MyWebApp.csproj",
+  "projectFilePath": "/Users/kkrzemin/Applications/sport-playing-partner-finder/MyWebApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
