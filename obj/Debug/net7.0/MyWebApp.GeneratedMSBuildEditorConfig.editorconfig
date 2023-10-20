@@ -9,49 +9,49 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MyWebApp
 build_property.RootNamespace = MyWebApp
-build_property.ProjectDir = c:\Users\devin\source\repos\sportRepos\sport-playing-partner-finder\
+build_property.ProjectDir = /Users/kkrzemin/Applications/sport-playing-partner-finder/
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\devin\source\repos\sportRepos\sport-playing-partner-finder
+build_property.MSBuildProjectDirectory = /Users/kkrzemin/Applications/sport-playing-partner-finder
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/devin/source/repos/sportRepos/sport-playing-partner-finder/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+[/Users/kkrzemin/Applications/sport-playing-partner-finder/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/devin/source/repos/sportRepos/sport-playing-partner-finder/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+[/Users/kkrzemin/Applications/sport-playing-partner-finder/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/devin/source/repos/sportRepos/sport-playing-partner-finder/Pages/LoginSignup.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5TaWdudXAuY3NodG1s
+[/Users/kkrzemin/Applications/sport-playing-partner-finder/Pages/LoginSignup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5TaWdudXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/devin/source/repos/sportRepos/sport-playing-partner-finder/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+[/Users/kkrzemin/Applications/sport-playing-partner-finder/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/devin/source/repos/sportRepos/sport-playing-partner-finder/Pages/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/Users/kkrzemin/Applications/sport-playing-partner-finder/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/devin/source/repos/sportRepos/sport-playing-partner-finder/Pages/Soccer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU29jY2VyLmNzaHRtbA==
+[/Users/kkrzemin/Applications/sport-playing-partner-finder/Pages/Soccer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU29jY2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/devin/source/repos/sportRepos/sport-playing-partner-finder/Pages/Tennis.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVubmlzLmNzaHRtbA==
+[/Users/kkrzemin/Applications/sport-playing-partner-finder/Pages/Tennis.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGVubmlzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/devin/source/repos/sportRepos/sport-playing-partner-finder/Pages/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/Users/kkrzemin/Applications/sport-playing-partner-finder/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/devin/source/repos/sportRepos/sport-playing-partner-finder/Pages/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/kkrzemin/Applications/sport-playing-partner-finder/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/devin/source/repos/sportRepos/sport-playing-partner-finder/Pages/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-529uds4zl5
+[/Users/kkrzemin/Applications/sport-playing-partner-finder/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-tdy2x9681t
