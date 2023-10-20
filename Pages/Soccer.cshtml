@@ -14,9 +14,32 @@ ViewData["Title"] = "Soccer";
     <title>
         Position Search
     </title>
+    <!-- <link rel="stylesheet" href="~/lib/(AT SYMBOL)radix-ui/themes/styles.css" /> !-->
     <style> 
         h1 {text-align: center;}
         p {text-align: center;}
+        <!-- table css stylization !-->
+        .table-style {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        .table-style th, .table-style td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .table-style th {
+            background-color: #3e49e6;
+            color: white;
+        }
+        .table-style tr:nth-child(even) {
+            background-color: white;
+        }
+        .table-style tr:hover {
+            background-color: #f5f5f5;
+        } 
     </style>
 </head>
 <body>
@@ -31,36 +54,11 @@ ViewData["Title"] = "Soccer";
             <option value="W">Winger</option>
             <option value="FB">Fullback</option> <!-- Fullback is Left back or Right back !-->
         </select>
-        <button type="submit">Search</button>
+        @* <button type="submit">Search</button> *@
         <!-- 
             <input type="text" name="position" placeholder="Position">
             <input type="submit" value="Search"> 
     </form> -->
-
-    <style> <!-- table css stylization !-->
-    .table-style {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .table-style th, .table-style td {
-        padding: 10px;
-        border: 1px solid #ddd;
-        text-align: left;
-    }
-    .table-style th {
-        background-color: #3e49e6;
-        color: white;
-    }
-    .table-style tr:nth-child(even) {
-        background-color: white;
-    }
-    .table-style tr:hover {
-        background-color: #f5f5f5;
-    }
-    </style>
     <table class="table-style"> 
             <thead>
                 <tr>
