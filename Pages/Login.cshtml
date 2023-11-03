@@ -1,0 +1,37 @@
+﻿@page
+@model MyWebApp.Pages.LoginModel
+@{
+ViewData["Title"] = "Login";
+}
+<head>
+    <link rel="stylesheet" href="~/css/Login.css">
+</head>
+
+<h1> Login </h1>
+
+<div class="container">
+    <form method="post" asp-page-handler = "Login">
+        <input type="text" asp-for="Login.email" placeholder="Email" required />
+        <input type="password" asp-for="Login.password" placeholder="Password" required />
+        <input type="submit" value="Login" />
+    </form>
+    <div>
+        <p>
+            Don't have an account?
+            <a asp-page="/Signup">Sign up</a>
+        </p>
+    </div>
+@if (!ModelState.IsValid)
+{
+    <div class="validation-summary-errors text-danger">
+        <ul>
+            @foreach (var modelState in ViewData.ModelState.Values)
+            {
+                foreach (var error in modelState.Errors)
+                {
+                    <li>@error.ErrorMessage</li>
+                }
+            }
+        </ul>
+    </div>
+}

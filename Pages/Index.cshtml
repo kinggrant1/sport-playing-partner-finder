@@ -4,6 +4,19 @@
     ViewData["Title"] = "Sport Playing Partner Finder";
     TimeSpan timeInBusiness = DateTime.Now - new DateTime(2023, 9, 28);
 }
+@{
+    var successMessage = TempData["SuccessMessage"] as string;
+}
+
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <script>
+        window.onload = function() {
+            // show the success message for login/signup
+            alert("@successMessage");
+        };
+    </script>
+}
 
 <div class="text-center">
     <h1>Sport Playing Partner Finder</h1>
@@ -11,6 +24,6 @@
     <p>We've been connecting tennis and soccer players for @Convert.ToInt32(timeInBusiness.TotalDays) days and counting!</p>
     <br>
     <p>Sign up for our <span style="font-weight:bold">nationwide social network</span> of tennis and soccer players:</p>
-    <button class="btn btn-primary"><a class="text-light" style="text-decoration:none" asp-area="" asp-page="/LoginSignup">Log In/Sign Up</a></button>
+    <button class="btn btn-primary"><a class="text-light" style="text-decoration:none" asp-area="" asp-page="/Login">Log In/Sign Up</a></button>
     @* <button class="btn btn-primary"><a class="text-light" style="text-decoration:none" asp-area="" asp-page="/LoginSignup">Sign Up</a></button> *@
 </div>
