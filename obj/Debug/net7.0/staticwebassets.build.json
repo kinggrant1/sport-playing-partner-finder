@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xdjoBTC1772JTA3pEYWZTVjns1EuSsnm+sAIdIpdlSY=",
+  "Hash": "NMz5WitmcXcRC7GtCGI21r869Zfq+FjpzGDh4AMmr4M=",
   "Source": "MyWebApp",
   "BasePath": "_content/MyWebApp",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/kkrzemin/Applications/sport-playing-partner-finder/obj/Debug/net7.0/scopedcss/projectbundle/MyWebApp.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/kkrzemin/Applications/sport-playing-partner-finder/wwwroot/css/login.css",
+      "SourceId": "MyWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kkrzemin/Applications/sport-playing-partner-finder/wwwroot/",
+      "BasePath": "_content/MyWebApp",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/login.css"
     },
     {
       "Identity": "/Users/kkrzemin/Applications/sport-playing-partner-finder/wwwroot/css/site.css",

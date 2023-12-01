@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/kkrzemin/Applications/sport-playing-partner-finder/Pages/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRm9yZ290UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/kkrzemin/Applications/sport-playing-partner-finder/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/kkrzemin/Applications/sport-playing-partner-finder/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kkrzemin/Applications/sport-playing-partner-finder/Pages/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVzZXRQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/kkrzemin/Applications/sport-playing-partner-finder/Pages/Shared/_ValidationScriptsPartial.cshtml]

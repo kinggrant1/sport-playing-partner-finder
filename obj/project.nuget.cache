@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CKiA6fBojCA1MIcfLAfrg3of9B/tj2Calguvic7/Fga+4UNnEAmvjr2xjKokcl1kOVFRnRsVDE++PL6pY9OylQ==",
+  "dgSpecHash": "YrH2ObBjYMyCu6aXs/fVsgq046TcoeMS7EoPhNhhLmeku1167Waf5KaF53vQPQypKoreZay1EuALRlYUIM93NQ==",
   "success": true,
   "projectFilePath": "/Users/kkrzemin/Applications/sport-playing-partner-finder/MyWebApp.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "/Users/kkrzemin/.nuget/packages/k4os.compression.lz4/1.3.5/k4os.compression.lz4.1.3.5.nupkg.sha512",
     "/Users/kkrzemin/.nuget/packages/k4os.compression.lz4.streams/1.3.5/k4os.compression.lz4.streams.1.3.5.nupkg.sha512",
     "/Users/kkrzemin/.nuget/packages/k4os.hash.xxhash/1.0.8/k4os.hash.xxhash.1.0.8.nupkg.sha512",
+    "/Users/kkrzemin/.nuget/packages/microsoft.codeanalysis.netanalyzers/7.0.4/microsoft.codeanalysis.netanalyzers.7.0.4.nupkg.sha512",
     "/Users/kkrzemin/.nuget/packages/microsoft.entityframeworkcore/7.0.2/microsoft.entityframeworkcore.7.0.2.nupkg.sha512",
     "/Users/kkrzemin/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.2/microsoft.entityframeworkcore.abstractions.7.0.2.nupkg.sha512",
     "/Users/kkrzemin/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.2/microsoft.entityframeworkcore.analyzers.7.0.2.nupkg.sha512",

@@ -10,13 +10,13 @@ namespace MyWebApp.Pages
     public class SignupModel : PageModel
     {
         [BindProperty]
-        public SignupInput Signup {get; set;}
+        public required SignupInput Signup {get; set;}
 
         public class SignupInput {
-            public string firstName {get; set;}
-            public string lastName {get; set;}
-            public string email {get; set;}
-            public string password { get; set; }
+            public required string firstName {get; set;}
+            public required string lastName {get; set;}
+            public required string email {get; set;}
+            public required string password { get; set; }
         }
         private string HashPassword(string password)
         {
@@ -44,7 +44,7 @@ namespace MyWebApp.Pages
             var hashedPassword = HashPassword(Signup.password);
 
             //db connection
-            string connectionString = "server=sql9.freesqldatabase.com;port=3306;database=sql9658005;user=sql9658005;password=jnZR1jkii2;";
+            string connectionString = "server=sql5.freesqldatabase.com;port=3306;database=sql5666497;user=sql5666497;password=EgmsYQ9bGa;";
             using(MySqlConnection connection = new MySqlConnection(connectionString)) {
                 connection.Open();
                 string checkEmailSql = "SELECT COUNT(1) FROM users WHERE email = @Email";
@@ -52,7 +52,7 @@ namespace MyWebApp.Pages
                     checkEmailCmd.Parameters.AddWithValue("@Email", Signup.email);
                     int count = Convert.ToInt32(checkEmailCmd.ExecuteScalar());
                     if (count > 0) {
-                // If the email already exists, add a model error and return to the page
+                // if the email already exists, add a model error and return to the page
                         ModelState.AddModelError("Signup.email", "The email is already in use.");
                         return Page();
             }

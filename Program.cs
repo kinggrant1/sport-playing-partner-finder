@@ -3,6 +3,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+// Register your EmailService for dependency injection
+builder.Services.AddTransient<MyWebApp.Services.EmailService>();
+
 // Add authentication services with cookie authentication
 builder.Services.AddAuthentication("cookieAuth").AddCookie("cookieAuth", options =>
 {

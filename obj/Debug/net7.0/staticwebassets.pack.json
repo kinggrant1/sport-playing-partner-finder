@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/MyWebApp.bundle.scp.css"
     },
     {
+      "Id": "/Users/kkrzemin/Applications/sport-playing-partner-finder/wwwroot/css/login.css",
+      "PackagePath": "staticwebassets/css/login.css"
+    },
+    {
       "Id": "/Users/kkrzemin/Applications/sport-playing-partner-finder/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

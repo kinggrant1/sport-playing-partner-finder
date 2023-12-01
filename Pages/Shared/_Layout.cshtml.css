@@ -60,3 +60,15 @@ button.accept-policy {
 .table-style {
   border: 1px solid #ddd;
 }
+
+.bottom-content {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333; /* Adjust background color as needed */
+  color: #fff; /* Text color for the bottom content */
+  text-align: center;
+  padding: 10px 0; /* Adjust padding as needed */
+}
+

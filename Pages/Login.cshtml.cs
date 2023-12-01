@@ -11,10 +11,10 @@ namespace MyWebApp.Pages
     public class LoginModel : PageModel
     {
         [BindProperty]
-        public LoginInput Login {get; set;}
+        public required LoginInput Login {get; set;}
         public class LoginInput {
-            public string email {get; set;}
-            public string password {get; set;}
+            public required string email {get; set;}
+            public required string password {get; set;}
         }
         private string HashPassword(string password)
         {
@@ -40,7 +40,7 @@ namespace MyWebApp.Pages
         // hash the password entered to compare with the database
         var hashedPassword = HashPassword(Login.password);
         //connection string
-        string connectionString = "server=sql9.freesqldatabase.com;port=3306;database=sql9658005;user=sql9658005;password=jnZR1jkii2;";
+        string connectionString = "server=sql5.freesqldatabase.com;port=3306;database=sql5666497;user=sql5666497;password=EgmsYQ9bGa;";
         using(MySqlConnection connection = new MySqlConnection(connectionString)) {
             connection.Open();
             string sql = "SELECT * FROM users WHERE email = @Email LIMIT 1";
