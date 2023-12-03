@@ -14,7 +14,7 @@ namespace MyWebApp.Pages
         {
             TennisPlayers = new List<TennisPlayer>();
 
-            string connectionString = "server=sql9.freesqldatabase.com;port=3306;database=sql9657993;user=sql9657993;password=XX25dnkAWg;";
+            string connectionString = "server=sql5.freesqldatabase.com;port=3306;database=sql5667044;user=sql5667044;password=wTkJzLah69;";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
