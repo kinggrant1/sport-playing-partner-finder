@@ -1785,19 +1785,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\devin\\.nuget\\packages\\": {}
+    "C:\\Users\\grant\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\devin\\source\\repos\\sportRepos\\sport-playing-partner-finder\\MyWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\grant\\sport-playing-partner-finder\\MyWebApp.csproj",
       "projectName": "MyWebApp",
-      "projectPath": "C:\\Users\\devin\\source\\repos\\sportRepos\\sport-playing-partner-finder\\MyWebApp.csproj",
-      "packagesPath": "C:\\Users\\devin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\devin\\source\\repos\\sportRepos\\sport-playing-partner-finder\\obj\\",
+      "projectPath": "C:\\Users\\grant\\sport-playing-partner-finder\\MyWebApp.csproj",
+      "packagesPath": "C:\\Users\\grant\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\grant\\sport-playing-partner-finder\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\devin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\grant\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1847,7 +1847,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

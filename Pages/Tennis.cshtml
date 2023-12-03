@@ -4,4 +4,16 @@
   ViewData["Title"] = "Tennis";
 }
 
-<h1>Tennis</h1>
+<h1 style="text-align:center">Tennis</h1>
+
+<h3>List of Registered Tennis Players:</h2>
+
+<ul>
+  @foreach (TennisPlayer tp in Model.TennisPlayers)
+  {
+    <li>
+      @tp.LastName, @tp.FirstName (@tp.Sex @tp.Age)<br>
+      NTRP Rating: <strong>@tp.NTRP</strong>
+    </li>
+  }
+</ul>
