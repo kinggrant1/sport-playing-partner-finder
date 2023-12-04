@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "36TsMa2Q9tBlwoogeMXaomzDtGMPpG/M92I62oZcR1U=",
+  "Hash": "TCzWvCJZjvHR7qlNF/tDoNFcLS+me54di6JGoNQqZU8=",
   "Source": "MyWebApp",
   "BasePath": "_content/MyWebApp",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\devin\\source\\repos\\sportRepos\\sport-playing-partner-finder\\wwwroot\\images\\soccerimage.jpg",
+      "SourceId": "MyWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\devin\\source\\repos\\sportRepos\\sport-playing-partner-finder\\wwwroot\\",
+      "BasePath": "_content/MyWebApp",
+      "RelativePath": "images/soccerimage.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\soccerimage.jpg"
     },
     {
       "Identity": "C:\\Users\\devin\\source\\repos\\sportRepos\\sport-playing-partner-finder\\wwwroot\\js\\site.js",

@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\devin\\source\\repos\\sportRepos\\sport-playing-partner-finder\\wwwroot\\images\\soccerimage.jpg",
+      "PackagePath": "staticwebassets\\images\\soccerimage.jpg"
+    },
+    {
       "Id": "C:\\Users\\devin\\source\\repos\\sportRepos\\sport-playing-partner-finder\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

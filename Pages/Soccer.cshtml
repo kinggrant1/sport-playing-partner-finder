@@ -1,30 +1,29 @@
 ﻿@page
 @model MyWebApp.Pages.SoccerModel
 @{
-ViewData["Title"] = "Soccer";
+    ViewData["Title"] = "Soccer";
 }
 
 <h1>Soccer</h1>
-<p> Functionality for Tournaments, search by position
-    and block coming soon... </p>
-
-<head>
+<p class="space"> Select a position with the dropdown menu to search for players by their respective positions. 
+    Players can have more than one position within the database of values. Note: We now have built-in functionality to create your ideal team with your friends!
+    Scroll down to learn more! </p>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>
-        Position Search
-    </title>
-    <!-- <link rel="stylesheet" href="~/lib/(AT SYMBOL)radix-ui/themes/styles.css" /> !-->
+    <title>Position Search</title>
+
+    <!-- ---------------------------------
+             STYLIZATION  -->
     <style> 
-        h1 {text-align: center;}
-        p {text-align: center;}
-        <!-- table css stylization !-->
+        h1, h2, p {text-align: center;}
+        .space {margin: 20px;}
+        .search-width {text-align: center; display:block; margin: 0 auto; width: 200px;}
         .table-style {
             width: 100%;
             border-collapse: collapse;
             margin: 20px auto;
         }
-
         .table-style th, .table-style td {
             padding: 10px;
             border: 1px solid #ddd;
@@ -40,60 +39,273 @@ ViewData["Title"] = "Soccer";
         .table-style tr:hover {
             background-color: #f5f5f5;
         } 
+        #team-container {
+            margin-top: 20px;
+        }
+        #team-container div {
+            background-color: #e0e0e0;
+            padding: 5px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        .search-box {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 20px auto;
+            max-width: 300px;
+            background-color: white;
+        }
+        .search-box select {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .match-request-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 200px;
+            margin: 20px auto;
+        }
+        .match-request-form label {
+            margin-bottom: 5px;
+        }
+        .match-request-form input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .match-request-form button {
+            background-color: #3e49e6;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .match-request-form button:hover {
+            background-color: #2c3aa6;
+        }
+        .match-request-result {
+            margin-top: 20px;
+        }
+        #requesterId, #requesteeId {
+            max-width: 200px;
+        }
+        #teamForm {
+            display: flex;
+            justify-content: space-between;
+        }
+        #teamForm input[type="submit"] {
+            background-color: #3e49e6;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #teamForm input[type="submit"]:hover {
+            background-color: green;
+        }
+
+        button {
+            background-color: grey;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: red;
+        }
     </style>
 </head>
+
 <body>
-    <h2> Search by position </h2>
-    <!--<form action="/search" method="GET"> -->
-        <select id="position" class="search-width">
-            <option value="">Select position</option> <!-- Default value !-->
-            <option value="GK">Goalkeeper</option>
-            <option value="CB">Center Back</option>
-            <option value="CM">Center Midfielder</option>
-            <option value="ST">Striker</option>
-            <option value="W">Winger</option>
-            <option value="FB">Fullback</option> <!-- Fullback is Left back or Right back !-->
-        </select>
-        @* <button type="submit">Search</button> *@
-        <!-- 
-            <input type="text" name="position" placeholder="Position">
-            <input type="submit" value="Search"> 
-    </form> -->
+    <select id="position" class="search-width">
+        <option value="">Select position</option>
+        <option value="GK">Goalkeeper</option>
+        <option value="CB">Center Back</option>
+        <option value="CM">Center Midfielder</option>
+        <option value="ST">Striker</option>
+        <option value="W">Winger</option>
+        <option value="FB">Fullback</option>
+    </select>
+
     <table class="table-style"> 
-            <thead>
-                <tr>
-                    <th style="padding: 1px">Player</th>
-                    <th style="padding: 1px">Position</th>
-                    <th style="padding: 1px">Age</th>
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Position</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var player in Model.Players) { 
+                <tr data-position="@player.Position">
+                    <td>@player.Name</td>
+                    <td>@player.Position</td>
+                    <td>@player.Age</td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var player in Model.Players) { 
-                    <tr data-position="@player.Position">
-                        <td style="padding: 1px">@player.Name</td>
-                        <td style="padding: 1px">@player.Position</td>
-                        <td style="padding: 1px">@player.Age</td>
-                    </tr>
-                }
-            </tbody>
+            }
+        </tbody>
     </table>
+
+    <p class="space"> Like who you see? Send them a match request! </p>
+
+    <div>
+    <h2>Send Match Request</h2>
+    <div id="matchRequestContainer" style="display: flex; justify-content: space-between; align-items: center;">
+        <form id="matchRequestForm" class="match-request-form" style="display: flex; flex-direction: column; align-items: center;">
+            <label for="requesterId">Requester ID:</label>
+            <input type="text" id="requesterId" name="requesterId" required>
+            
+            <label for="requesteeId">Requestee ID:</label>
+            <input type="text" id="requesteeId" name="requesteeId" required>
+
+            <button type="button" onclick="sendMatchRequest()">Send Match Request</button>
+        </form>
+    </div>
+    <div id="requestResult"></div>
+    </div>
+
     <script>
-        var positionFilter = document.getElementById('position'); //look at links for more information
-        var rows = document.querySelectorAll('.table-style tbody tr'); //querySelectorAll accepts css selectors
-        
+    function sendMatchRequest() {
+        var requesterId = document.getElementById('requesterId').value; 
+        var requesteeId = document.getElementById('requesteeId').value;
+
+        // Fetch the player name based on the requester ID
+        Promise.all([getPlayerName(requesterId), getPlayerName(requesteeId)]) //tried to use promise to get player name. 
+        .then(names => {
+            var requesterName = names[0];
+            var requesteeName = names[1];
+
+            // Show the popup message
+            alert(requesterName + ' sent ' + requesteeName + ' a match request!');
+        })
+        .catch(error => {
+            console.error(error);
+        });
+        var request = {
+            requesterId: parseInt(requesterId),
+            requesteeId: parseInt(requesteeId)
+        };
+
+        fetch('/Soccer/', { //fetches request but doesn't work how it's supposed to. 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(request)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            document.getElementById('requestResult').innerText = data.message;
+        })
+        .catch(error => {
+            console.error('ERROR!', error);
+        });
+    }
+
+    async function getPlayerName(requesterId) { //gets the player name
+        try {
+            const response = await fetch(`/Soccer/GetPlayerName?requesterId=${requesterId}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            return data.playerName;
+        } catch (error) {
+            throw new Error('Failed to get player name');
+        }
+    }
+    </script>
+
+    <div> 
+        <br> </br>
+
+        <h2>Create a Team!</h2>
+        <div id="team-container" class="space"></div>
+        <div style="display: flex; justify-content: center;">
+            <form method="post" asp-page-handler="SubmitTeam" id="teamForm" style = "margin-right: 10px;">
+                <input asp-for="Team.Team_Name" type="text" name="team_Name" placeholder="Team Name" required />
+                <input type="submit" value="Submit" style = "margin-left: 5px;"/>
+            </form>
+            <div style="display: flex; justify-content: space-between;">
+                <button onclick="clearTeam()">Clear Team</button>
+            </div>
+        </div>
+
+    <script>
+        var positionFilter = document.getElementById('position'); // allows to select a position
+        var rows = document.querySelectorAll('.table-style tbody tr'); // allows to select a player
+        var teamContainer = document.getElementById('team-container'); // allows to select a team
+        var selectedPlayers = [];
+
         positionFilter.addEventListener('change', function() {
             var selectedPosition = this.value;
-            console.log("selectedPosition: ", selectedPosition);
-            rows.forEach(function(row) {
-                //var position = row.cells[1].innerText; //works but isn't ideal way of doing it
-                var position = row.getAttribute('data-position');
-                console.log("position: ", position);
-                if (selectedPosition === '' || selectedPosition === position) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
+            updatePlayerDisplay(selectedPosition);
+        });
+        // this allows the user to select a player and add them to their team
+        rows.forEach(function(row) {
+            row.addEventListener('click', function() {
+                var playerName = row.cells[0].innerText;
+                var playerPosition = row.cells[1].innerText;
+
+                if (selectedPlayers.some(player => player.name === playerName)) {
+                    alert('This player is already selected.');
+                    return;
                 }
+
+                var count = countPlayersInPosition(playerPosition);
+                if ((playerPosition === 'GK' && count >= 1) || (['FB', 'CB', 'CM', 'ST', 'W'].includes(playerPosition) && count >= 2)) {
+                    alert('Cannot have more than the allowed number of players for this position.');
+                    return;
+                }
+
+                if (selectedPlayers.length >= 11) {
+                    alert('Team is already full.');
+                    return;
+                }
+
+                selectedPlayers.push({ name: playerName, position: playerPosition });
+                displaySelectedTeam();
             });
         });
+
+        //function updates the display of players based on the selected position
+        function updatePlayerDisplay(selectedPosition) {
+            rows.forEach(function(row) {
+                var position = row.getAttribute('data-position');
+                row.style.display = (selectedPosition === '' || selectedPosition === position) ? '' : 'none';
+            });
+        }
+
+        //function counts the number of players in a position
+        function countPlayersInPosition(position) {
+            return selectedPlayers.filter(player => player.position === position).length;
+        }
+        //function displays the selected team
+        function displaySelectedTeam() { 
+            teamContainer.innerHTML = '';
+            selectedPlayers.forEach(function(player) {
+                var playerElement = document.createElement('div');
+                playerElement.textContent = `${player.name} - ${player.position}`;
+                teamContainer.appendChild(playerElement);
+            });
+        }
+
+        function clearTeam() { //clears the team
+            selectedPlayers = [];
+            displaySelectedTeam();
+        }
     </script>
+
 </body>
