@@ -1,0 +1,25 @@
+@page
+@model MyWebApp.Pages.TennisDoublesSchedulerModel
+@{
+  ViewData["Title"] = "Tennis Doubles Scheduler";
+}
+
+<h1 style="text-align:center">Tennis Doubles Scheduler</h1>
+
+<form method="post" asp-page-handler="Submit" style="border: solid; border-width: 2px; border-radius: 10px; border-color: gray; padding: 16px">
+  <div class="form-group">
+    <strong><label class="form-label" for="doublesPlayers">Who would you like to play with?</label></strong>
+    <textarea class="form-control" rows="1" name="doublesPlayers"></textarea>
+    <br>
+    <strong><label class="form-label" for="doublesLocation">Where would you like to play?</label></strong>
+    <textarea class="form-control" rows="1" name="doublesLocation"></textarea>
+    <br>
+    <strong><label class="form-label" for="doublesTime">When would you like to play?</label></strong>
+    <textarea class="form-control" rows="1" name="doublesTime"></textarea>
+    <br>
+    <strong><label class="form-label" for="doublesDuration">How long can they expect you'll be able to play for?</label></strong>
+    <textarea class="form-control" rows="1" name="doublesDuration"></textarea>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

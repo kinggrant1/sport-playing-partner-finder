@@ -1,0 +1,26 @@
+@page
+@model MyWebApp.Pages.TennisSinglesSchedulerModel
+@{
+  ViewData["Title"] = "Tennis Singles Scheduler";
+}
+
+<h1 style="text-align:center">Tennis Singles Scheduler</h1>
+
+@foreach (TennisPlayer tp in Model.TennisPlayers)
+{
+  <form method="post" asp-page-handler="Submit" style="border: solid; border-width: 2px; border-radius: 10px; border-color: gray; padding: 16px">
+    <div class="form-group">
+      <strong><label class="form-label" for="singlesLocation">Where would you like to play @tp.FirstName?</label></strong>
+      <textarea class="form-control" rows="1" name="singlesLocation"></textarea>
+      <br>
+      <strong><label class="form-label" for="singlesTime">When would you like to play?</label></strong>
+      <textarea class="form-control" rows="1" name="singlesTime"></textarea>
+      <br>
+      <strong><label class="form-label" for="singlesDuration">How long can @tp.FirstName expect you'll be able to play for?</label></strong>
+      <textarea class="form-control" rows="1" name="singlesDuration"></textarea>
+      <input type="hidden" name="singlesPlayer" value="@tp.FirstName" />
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+}

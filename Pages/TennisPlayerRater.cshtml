@@ -1,0 +1,34 @@
+@page
+@model MyWebApp.Pages.TennisPlayerRaterModel
+@{
+  ViewData["Title"] = "Tennis Player Rater";
+}
+
+<h1 style="text-align:center">Tennis Player Rater</h1>
+
+@foreach (TennisPlayer tp in Model.TennisPlayers)
+{
+  <form method="post" asp-page-handler="Submit" style="border: solid; border-width: 2px; border-radius: 10px; border-color: gray; padding: 16px">
+    <div class="form-group">
+      <strong><label class="form-label" for="playerRating">What do you rate @tp.FirstName?</label></strong>
+      <input type="hidden" name="playerId" value="@tp.Id" />
+      <select class="form-select" name="playerRating">
+        <option value="1">1/10</option>
+        <option value="2">2/10</option>
+        <option value="3">3/10</option>
+        <option value="4">4/10</option>
+        <option value="5">5/10</option>
+        <option value="6">6/10</option>
+        <option value="7">7/10</option>
+        <option value="8">8/10</option>
+        <option value="9">9/10</option>
+        <option value="10">10/10</option>
+      </select>
+      <br>
+      <strong><label class="form-label" for="playerComment">Comment on your experience with @tp.FirstName:</label></strong>
+      <textarea class="form-control" rows="5" name="playerComment"></textarea>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+}

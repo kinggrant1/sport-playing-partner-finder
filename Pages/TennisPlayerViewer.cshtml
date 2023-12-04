@@ -1,0 +1,33 @@
+@page
+@model MyWebApp.Pages.TennisPlayerViewerModel
+@{
+  ViewData["Title"] = "Tennis Player Viewer";
+}
+
+<h1 style="text-align:center">Tennis Player Viewer</h1>
+
+<section style="display: flex; justify-content: space-between">
+  <div>
+    @foreach (TennisPlayer tp in Model.TennisPlayers)
+    {
+      <h3>@tp.FirstName @tp.LastName</h3>
+      <p>(@tp.Sex @tp.Age) NTRP Rating: <strong>@tp.NTRP</strong></p>
+
+      <p style="color: gray; margin-bottom: 4px">Want to play against @tp.FirstName?</p>
+
+      <button class="btn btn-primary" onClick="location.href='/TennisSinglesScheduler/?Player=@tp.Id'">Schedule a Singles Session</button>
+
+      <p style="color: gray; margin-top: 16px; margin-bottom: 4px">Share your experience playing @tp.FirstName with the Sport Playing Partner Finder community:</p>
+
+      <button class="btn btn-primary" onClick="location.href='/TennisPlayerRater/?Player=@tp.Id'">Leave a Rating</button>
+    }
+  </div>
+  <div>
+    <h3>Player Ratings</h3>
+    @foreach (TennisPlayerRating tpr in Model.TennisPlayerRatings)
+    {
+      <p style="margin-bottom: 0px"><strong>Rating:</strong> <span style="color: gray">@tpr.PlayerRating/10</span></p>
+      <p><strong>Comments:</strong> <span style="color: gray">@tpr.PlayerComment</span></p>
+    }
+  </div>
+</section>
