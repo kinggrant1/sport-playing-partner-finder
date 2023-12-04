@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\grant\\sport-playing-partner-finder\\wwwroot\\doubles.jpg",
+      "PackagePath": "staticwebassets\\doubles.jpg"
+    },
+    {
       "Id": "C:\\Users\\grant\\sport-playing-partner-finder\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "n26RvvOHGxm4CUSbcXg9xeKzcyS9VvPgJt5Conna+QE=",
+  "Hash": "6DKwEAkUDM1b0A6ZaYl5YEtKtOJx4c/kHV0G1B4I2kM=",
   "Source": "MyWebApp",
   "BasePath": "_content/MyWebApp",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\grant\\sport-playing-partner-finder\\wwwroot\\doubles.jpg",
+      "SourceId": "MyWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\grant\\sport-playing-partner-finder\\wwwroot\\",
+      "BasePath": "_content/MyWebApp",
+      "RelativePath": "doubles.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\doubles.jpg"
     },
     {
       "Identity": "C:\\Users\\grant\\sport-playing-partner-finder\\wwwroot\\favicon.ico",

@@ -6,14 +6,52 @@
 
 <h1 style="text-align:center">Tennis</h1>
 
-<h3>List of Registered Tennis Players:</h2>
+<section style="display: flex; justify-content: space-between">
+  <div>
+    <h3>List of Registered Tennis Players:</h3>
+    <p style="color: gray">Click on any player's name to schedule a singles session with them<span><br></span> or to rate them.</p>
 
-<ul>
-  @foreach (TennisPlayer tp in Model.TennisPlayers)
-  {
-    <li>
-      @tp.LastName, @tp.FirstName (@tp.Sex @tp.Age)<br>
-      NTRP Rating: <strong>@tp.NTRP</strong>
-    </li>
-  }
-</ul>
+    <ul>
+      @foreach (TennisPlayer tp in Model.TennisPlayers)
+      {
+        <li>
+          <a href="/TennisPlayerViewer/?Player=@tp.Id">@tp.LastName, @tp.FirstName</a> (@tp.Sex @tp.Age)
+          <br>
+          NTRP Rating: <strong>@tp.NTRP</strong>
+        </li>
+      }
+    </ul>
+  </div>
+  <div>
+    <div>
+      <h3>My Scheduled Singles Sessions:</h3>
+
+      @foreach (TennisSinglesSession tss in Model.TennisSinglesSessions)
+      {
+        <p style="margin-bottom: 0px"><strong>Player:</strong> <span style="color: gray">@tss.SinglesPlayer</span></p>
+        <p style="margin-bottom: 0px"><strong>Location:</strong> <span style="color: gray">@tss.SinglesLocation</span></p>
+        <p style="margin-bottom: 0px"><strong>Time:</strong> <span style="color: gray">@tss.SinglesTime</span></p>
+        <p><strong>Duration:</strong> <span style="color: gray">@tss.SinglesDuration</span></p>
+      }
+    </div>
+    <br>
+    <div>
+      <h3>My Scheduled Doubles Sessions:</h3>
+
+      @foreach (TennisDoublesSession tds in Model.TennisDoublesSessions)
+      {
+        <p style="margin-bottom: 0px"><strong>Players:</strong> <span style="color: gray">@tds.DoublesPlayers</span></p>
+        <p style="margin-bottom: 0px"><strong>Location:</strong> <span style="color: gray">@tds.DoublesLocation</span></p>
+        <p style="margin-bottom: 0px"><strong>Time:</strong> <span style="color: gray">@tds.DoublesTime</span></p>
+        <p><strong>Duration:</strong> <span style="color: gray">@tds.DoublesDuration</span></p>
+      }
+    </div>
+  </div>
+  <div style="text-align: center">
+    <h3>Interested in doubles?</h3>
+
+    <button class="btn btn-primary" onClick="location.href='/TennisDoublesScheduler'">Schedule a Doubles Session</button>
+    <br>
+    <img src="/doubles.jpg" style="width: 256px; height: 185px; margin: 25px"/>
+  </div>
+</section>
